@@ -36,6 +36,10 @@ app.get('/toggle', (req, res) => {
     res.json({ code });
 });
 
+app.get('/', (req, res) => {
+    res.json("Hello World!");
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
