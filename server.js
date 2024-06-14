@@ -13,7 +13,7 @@ app.use(cors({
 }));
 
 let placeholderText = "Type Your Name";
-let code = "red";
+let code = "green";
 
 app.use((req, res, next) => {
     console.log(`${req.method} request for '${req.url}'`);
