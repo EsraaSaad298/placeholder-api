@@ -13,7 +13,9 @@ app.use(cors({
 }));
 
 let placeholderText = "Type Your Name";
-let code = "green";
+let financePlaceHolderText = 'Enter buying price (USD)';
+let financeCode = "green";
+let code = "red";
 
 app.use((req, res, next) => {
     console.log(`${req.method} request for '${req.url}'`);
@@ -26,6 +28,12 @@ app.get('/placeholder', (req, res) => {
     const responseText = code === "green" ? placeholderText : "";
     console.log(`Returning placeholderText: ${responseText}`);
     res.json({ code, placeholderText: responseText });
+});
+
+app.get('/financePlaceholder', (req, res) => {
+    const responseText = financeCode === "green" ? financePlaceHolderText : "";
+    console.log(`Returning finance placeholderText: ${responseText}`);
+    res.json({ code: financeCode, placeholderText: responseText });
 });
 
 // Toggle endpoint to change the code state
