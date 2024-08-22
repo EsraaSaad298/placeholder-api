@@ -14,7 +14,7 @@ app.use(cors({
 
 let placeholderText = "Type Your Name";
 let financePlaceHolderText = 'Enter buying price (USD)';
-let financeCode = "red";
+let financeCode = "green";
 let code = "red";
 
 app.use((req, res, next) => {
